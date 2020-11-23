@@ -1,0 +1,16 @@
+<div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Question</th>
+          <th scope="col">Priority</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let row of questionList">
+          <td>{{row.question}}</td>
+          <td>{{row.priority}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

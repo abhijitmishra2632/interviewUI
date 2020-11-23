@@ -1,0 +1,38 @@
+<div>
+  <form class="form-inline" (ngSubmit)="onFilterSubject()">
+    <div class="form-group mb-2">
+      <label for="subject">Subject: </label>
+      <select class="form-control"  id="subject" required [(ngModel)]="subject" name="subject">
+        <option *ngFor="let sub of coreList" [value]="sub">{{sub}}</option>
+      </select>
+  </div>
+    <div class="form-group mx-sm-3 mb-2">
+      <label for="topic" class="sr-only">Topic: </label>
+      <input type="text" class="form-control" id="topic" placeholder="topic">
+    </div>
+    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+  </form>
+</div>
+
+<div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Question</th>
+          <th scope="col">Priority</th>
+          <th scope="col">Clone</th>
+        <th scope="col">Update</th>
+        <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let row of questionList">
+          <td>{{row.question}}</td>
+          <td>{{row.priority}}</td>
+          <td><button type="click" class="btn btn-primary btn-sm" (click)="onClone(row)">Clone</button></td>
+        <td><button type="button" class="btn btn-secondary btn-sm" (click)="onUpdate(row)">Update</button></td>
+        <td><button type="button" class="btn btn-danger btn-sm" (click)="onDelete(row)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
