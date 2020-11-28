@@ -4,16 +4,20 @@
       <tr>
         <th scope="col">Question</th>
         <th scope="col">Priority</th>
-        <th scope="col">Clone</th>
+        <th scope="col">Answer</th>
+      <th scope="col">View Answer</th>
+      <th scope="col">Clone</th>
       <th scope="col">Update</th>
-      <th scope="col">Delete</th>
+      <th scope="col">Delete</th>   
       </tr>
     </thead>
     <tbody>
       <tr *ngFor = "let row of questionList">
         <td>{{row.question}}</td>
         <td>{{row.priority}}</td>
-        <td><button type="click" class="btn btn-primary btn-sm" (click)="onClone(row)">Clone</button></td>
+        <td><button type="click" class="btn btn-primary btn-sm" (click)="onProvideAnswer(row)">Answer</button></td>
+      <td><button type="click" class="btn btn-primary btn-sm" (click)="onSeeAnswer(row)">View</button></td>
+      <td><button type="click" class="btn btn-primary btn-sm" (click)="onClone(row)">Clone</button></td>
       <td><button type="button" class="btn btn-secondary btn-sm" (click)="onUpdate(row)">Update</button></td>
       <td><button type="button" class="btn btn-danger btn-sm" (click)="onDelete(row)">Delete</button></td>
       </tr>

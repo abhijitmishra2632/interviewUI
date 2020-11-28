@@ -18,6 +18,14 @@ import { DevopComponent } from './body/devop/devop.component';
 import { TestingComponent } from './body/testing/testing.component';
 import { ScriptingComponent } from './body/scripting/scripting.component';
 import { MessageqComponent } from './body/messageq/messageq.component';
+import { CloneComponent } from './function/clone/clone.component';
+import { UpdateComponent } from './function/update/update.component';
+import { DeleteComponent } from './function/delete/delete.component';
+import { AnswerComponent } from './function/answer/answer.component';
+import { ViewanswerComponent } from './function/viewanswer/viewanswer.component';
+import { RecyclebinComponent } from './body/recyclebin/recyclebin.component';
+import { UndoComponent } from './function/undo/undo.component';
+import { DeletepermanentlyComponent } from './function/deletepermanently/deletepermanently.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +42,15 @@ import { MessageqComponent } from './body/messageq/messageq.component';
     DevopComponent,
     TestingComponent,
     ScriptingComponent,
-    MessageqComponent
+    MessageqComponent,
+    CloneComponent,
+    UpdateComponent,
+    DeleteComponent,
+    AnswerComponent,
+    ViewanswerComponent,
+    RecyclebinComponent,
+    UndoComponent,
+    DeletepermanentlyComponent
   ],
   imports: [
     BrowserModule,

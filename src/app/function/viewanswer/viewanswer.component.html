@@ -1,0 +1,21 @@
+<div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Answer </th>
+          <th scope="col">Update </th>
+          <th scope="col">Delete </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let row of answermodels">
+          <td>{{row.answer}}</td>
+          <td><button type="button" class="btn btn-secondary btn-sm" (click)="onUpdate(row)">Update</button></td>
+          <td><button type="button" class="btn btn-danger btn-sm" (click)="onDelete(row)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+        
+        
+        

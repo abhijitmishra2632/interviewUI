@@ -1,4 +1,5 @@
 export class Questionmodel{
+    public questionseq:number;
     public question:string;
     public technology:string;
     public subject:string;

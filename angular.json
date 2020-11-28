@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "interviewUI"
+    }
+  },
+  "defaultProject": "interviewUI",
+  "cli": {
+    "analytics": "faa43a9d-db40-40e9-bcaa-1b92a170203f"
+  }
 }

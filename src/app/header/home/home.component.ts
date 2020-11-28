@@ -12,12 +12,14 @@ export class HomeComponent implements OnInit {
   techActive:boolean=false;
   questionmodel:Questionmodel = new Questionmodel();;
   priorityList = ['Low','Medium','High'];
-  technologyList = ['Project', 'Core Java', 'J2EE', 'Framework', 'Tools','DB','DS and Algorithm','Devops','Testing','Scripting','MessagingQ'];
-  coreList =['OOPs','String','Exception Handling','Collection','Map','Thread','Concurrency','Java8','Serialization'];
+  technologyList = ['Project', 'Core Java', 'J2EE', 'Framework', 'Tools','DB','UI','DS and Algorithm','Devops','Testing','Scripting','MessagingQ'];
+  coreList =['basics','OOPs','String','Exception Handling','Collection','Map','Thread','Synchronization','Concurrency','Java8','Serialization','Garbage Collection',];
   J2EEList = ['Servlet','JDBC','Design Pattern'];
   frameworkList = ['Spring Core','Spring MVC','Spring Security','Spring Boot','Hibernate','Rest','Micro Services'];
   toolsList = ['Maven/Gradle','GIT/SVN','Jenkins/Hudson','Checkmarx'];
   dbList =['MySQL','MongoDB'];
+  uiList =['Angular'];
+  testingList=['JUnit','Mockito','TestNG'];
   constructor(private questionService:QuestionService) { }
 
   ngOnInit(): void {

@@ -1,0 +1,25 @@
+<div *ngIf="pageActive">
+    <h3>Update Question: </h3>
+        <form (ngSubmit)="onUpdateQuestion()">
+            <div class="form-group">
+                <label for="question">Question:</label>
+                <div>
+                  <input type="text" class="form-control" name="question" [(ngModel)]="questionmodel.question" id="question" placeholder="Enter the question u want to add?">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="priority">Importance: </label>
+                <select class="form-control" id="priority" required [(ngModel)]="questionmodel.priority" name="priority">
+                    <option *ngFor="let pr of priorityList" [value]="pr">{{pr}}</option>
+                  </select>
+            </div>
+            
+            <div class="form-group">
+              <div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </form>
+  </div>
+

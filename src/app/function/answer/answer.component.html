@@ -1,0 +1,25 @@
+<div *ngIf="!showSuccess">
+    <form (ngSubmit)="onSubmitAnswer()">
+        <div class="form-group">
+            <label for="question">Question :</label>
+            <div>
+              <input type="text" class="form-control" name="answermodel.question" [(ngModel)]="answermodel.question" id="question" placeholder="{{questionmodel.question}}">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="answer">Answer: </label>
+            <textarea class="form-control" id="answer" rows="10" name="answermodel.answer" [(ngModel)]="answermodel.answer"></textarea>
+          </div>
+          <div class="form-group">
+            <div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+    </form>
+</div>
+<div *ngIf="showSuccess">
+    <a>Successfully added the answer..</a>
+</div>
+<div *ngIf="showError">
+    <a>Some Error while adding the answer. Try one more time..</a>
+</div>

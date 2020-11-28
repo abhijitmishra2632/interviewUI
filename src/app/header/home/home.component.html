@@ -55,7 +55,23 @@
                     </select>
                 </div>
                 </div>
+              <div *ngSwitchCase="'UI'">
+                <div class="form-group">
+                  <label for="subject">Subject: </label>
+                  <select class="form-control"  id="subject" required [(ngModel)]="questionmodel.subject" name="subject">
+                    <option *ngFor="let sub of uiList" [value]="sub">{{sub}}</option>
+                  </select>
               </div>
+              </div>
+            <div *ngSwitchCase="'Testing'">
+              <div class="form-group">
+                <label for="subject">Subject: </label>
+                <select class="form-control"  id="subject" required [(ngModel)]="questionmodel.subject" name="subject">
+                  <option *ngFor="let sub of testingList" [value]="sub">{{sub}}</option>
+                </select>
+            </div>
+            </div>
+          </div>
               
             <div class="form-group">
               <label for="topic">Topic:</label>
@@ -89,4 +105,4 @@
             </div>
           </form>
   </div>
-  {{questionmodel | json}}
+  <!-- {{questionmodel | json}} -->

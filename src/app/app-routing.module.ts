@@ -12,6 +12,14 @@ import { ScriptingComponent } from './body/scripting/scripting.component';
 import { TestingComponent } from './body/testing/testing.component';
 import { ToolsComponent } from './body/tools/tools.component';
 import { HomeComponent } from './header/home/home.component';
+import { AnswerComponent } from './function/answer/answer.component';
+import { ViewanswerComponent } from './function/viewanswer/viewanswer.component';
+import { CloneComponent } from './function/clone/clone.component';
+import { UpdateComponent } from './function/update/update.component';
+import { DeleteComponent } from './function/delete/delete.component';
+import { RecyclebinComponent } from './body/recyclebin/recyclebin.component';
+import { UndoComponent } from './function/undo/undo.component';
+import { DeletepermanentlyComponent } from './function/deletepermanently/deletepermanently.component';
 
 const routes: Routes = [
   {path:  "", pathMatch:  "full",redirectTo:  "home"},
@@ -26,7 +34,16 @@ const routes: Routes = [
   {path: "devop", component: DevopComponent},
   {path: "testing", component: TestingComponent},
   {path: "scripting", component: ScriptingComponent},
-  {path: "messageq", component: MessageqComponent}
+  {path: "messageq", component: MessageqComponent},
+  {path: "recyclebin", component: RecyclebinComponent},
+
+  {path: "answer/:id", component: AnswerComponent},
+  {path: "vanswer/:id", component: ViewanswerComponent},
+  {path: "clone/:id", component: CloneComponent},
+  {path: "update/:id", component: UpdateComponent},
+  {path: "undo/:id", component: UndoComponent},
+  {path: "delete/:id", component: DeleteComponent},
+  {path: "pdelete/:id", component: DeletepermanentlyComponent}
 
   
 ];
